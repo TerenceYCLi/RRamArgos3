@@ -15,3 +15,12 @@ sudo apt-get install cmake libfreeimage-dev libfreeimageplus-dev \
   lua5.3 doxygen graphviz libgraphviz-dev asciidoc
 ```
 
+```
+git clone https://github.com/ilpincy/argos3.git argos3
+cd argos3
+$ mkdir build_simulator
+$ cd build_simulator
+$ cmake ../src
+$ make
+```
+
