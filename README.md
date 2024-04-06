@@ -17,10 +17,29 @@ sudo apt-get install cmake libfreeimage-dev libfreeimageplus-dev \
 
 ```
 git clone https://github.com/ilpincy/argos3.git argos3
+```
+```
 cd argos3
-$ mkdir build_simulator
-$ cd build_simulator
-$ cmake ../src
-$ make
+mkdir build_simulator
+cd build_simulator
+cmake ../src
+make -j8
+```
+```
+make doc
+sudo make install
 ```
 
+# Install Argos3-epuck
+```
+git clone https://github.com/demiurge-project/argos3-epuck argos3-epuck
+```
+
+```
+cd argos3-epuck
+mkdir build
+cd build
+cmake ../src
+make
+sudo make install
+```
