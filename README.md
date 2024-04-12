@@ -33,6 +33,10 @@ make -j8
 make doc
 sudo make install
 ```
+## add path to ~/.bashrc
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/argos3/
+```
 
 # Install Argos3-epuck
 ```
