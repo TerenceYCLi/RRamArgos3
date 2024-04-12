@@ -15,7 +15,7 @@ https://github.com/Pold87/AB-interface-ARGoS-module
 ## install the dependencies for Ubuntu 22.04
 ```
 sudo apt-get install cmake libfreeimage-dev libfreeimageplus-dev \
-  qt5- freeglut3-dev libxi-dev libxmu-dev liblua5.3-dev \
+  qtbase5-dev qt5-qmake freeglut3-dev libxi-dev libxmu-dev liblua5.3-dev \
   lua5.3 doxygen graphviz libgraphviz-dev asciidoc
 ```
 
