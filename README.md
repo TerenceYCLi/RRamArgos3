@@ -80,10 +80,19 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ARGOS_PREFIX}/share/argos3/cmake)
 message(STATUS "CMAKE_MODULE_PATH = ${CMAKE_MODULE_PATH}")
 set(ARGOS_LIBRARY_DIRS "/usr/local/lib/argos3")
 ```
+And replace line 39 with the following line
+```
+find_package(Lua REQUIRED)
+```
 
 ```
 mkdir build
 cd build
 cmake ..
 make
+```
+## Try to run 
+```
+cd ../
+bash starters/1_Plain.sh 3
 ```
