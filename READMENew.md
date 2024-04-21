@@ -39,9 +39,46 @@ vim ~/.bashrc
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
 ```
+## restart a new prompt then enter
+```
+go version
+```
+the version of go should 1.7.3, if not, uninstall the system golan by 
+```
+sudo apt remove golang*
+```
+## install geth by running 
+```
+cd ~/ReRam/blockchain-swarm-robotics
+bash create_geths.sh
+```
+## after installation, add below to the end of ~/.bashrc
+```
+export PATH=$PATH:$HOME/ReRam/blockchain-swarm-robotics/go-ethereum0/build/bin
+```
 
+# install solc, since the version in repo is v0.4.8, need to build from source
+## install dependency libboost < 1.7.0
+```
+sudo apt install libboost1.67-all-dev
+```
 
 ## download solc v0.4.8
 ```
+cd ~/Downloads
 git clone --recurse-submodules --depth 1 --branch v0.4.8 https://github.com/ethereum/solidity.git
+cd solidity
+mkdir build
+cd build
+cmake ..
 ```
+
+## You will encounter error: this statement may fall through [-Werror=implicit-fallthrough=] 
+open vscode 
+open ~/Downloads/solidity/build/deps/jsoncpp/src/jsoncpp-project/CMakeLists.txt
+comment line 95 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
+
+search -Werror through the build folder
+delete all -Werror flag in **flags.make** files
+
+
