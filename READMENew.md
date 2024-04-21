@@ -71,6 +71,8 @@ cd solidity
 mkdir build
 cd build
 cmake ..
+make -j4
+sudo make install
 ```
 
 ## You will encounter error: this statement may fall through [-Werror=implicit-fallthrough=] 
@@ -80,5 +82,11 @@ comment line 95 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
 
 search -Werror through the build folder
 delete all -Werror flag in **flags.make** files
+
+## modify the start_experiment1.sh to tune the parameters and run the experiment
+```
+cd ~/ReRam/blockchain-swarm-robotics
+bash start_experiment1.sh 0 0 1
+```
 
 
